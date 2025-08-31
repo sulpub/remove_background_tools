@@ -25,10 +25,10 @@ conda create -n dev python=3.10
 conda activate dev
 
 #For exited dev env :
-conda deactivate devconda 
+conda deactivate dev
 ```
 
-## Installed dependancy
+## Installing dependencies
 
 Before running the python script for removing background, you must installed these dependancy
 ```
@@ -49,7 +49,7 @@ note for uninstalled pip package :
 pip uninstall -y onnxruntime
 ```
 
-## create the python script
+## Create the python script
 
 Create a directory "notebook"
 enter in notebook and create a directory "remove_background"
@@ -185,9 +185,9 @@ if __name__ == "__main__":
 
 ```
 
-## execute the script for removing background
+## Execute the script for removing background
 
-Create a image directory with two sub directory for example "original" and "rmbg"
+Create an image directory with two subdirectories, for example, ‘original’ and ‘rmbg’.
 
 ```
 mkdir  ~/notebook/remove_background/images
@@ -215,4 +215,5 @@ python remove_background_batch_iset_gen.py images/original/ images/rmbg/
 ```
 
 ***Note: I had a few WSL crashes because the script loads the ‘isnet-general-use.onnx’ model, which uses a lot of memory, and with a Docker that uses quite a few containers.
+
 To get the script to work, I stopped Docker to free up some memory.***
